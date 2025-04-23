@@ -41,6 +41,20 @@
     .menu-toggle span {
       display: block; height: 3px; background: #fff; border-radius: 2px;
     }
+    .menu-toggle {
+  width: 28px;        /* ensure the button has a fixed width */
+  height: 24px;       /* a bit more height for spacing */
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;        /* fill the full width of the button */
+  height: 3px;        /* thickness of each line */
+  margin: 4px 0;      /* vertical gap between lines */
+  background-color: #fff;  /* white bars on your dark blue header */
+  border-radius: 2px;
+}
+
     .dropdown-menu {
       display: none; position: absolute; top: 100%; right: 2rem;
       background: #fff; padding: 0.5rem 1rem; border-radius: 5px;
