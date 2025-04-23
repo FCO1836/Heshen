@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Programs | Hoshen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet"/>
   <style>
     /* ───── Global & Header ───── */
-    body { margin: 0; font-family: 'Open Sans', sans-serif; background: #f8f5f0; color: #2d2d2d; }
-    header { background: #004b6b; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    header img { height: 60px; }
-    nav { display: flex; gap: 1rem; }
-    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.95rem; }
-    .btn-donate { /* same as above */ background-color:#c4a64f;color:#fff;padding:0.5rem 1.2rem;border-radius:4px;text-decoration:none;font-weight:bold;transition:background-color .25s ease,transform .1s ease; }
-    .btn-donate:hover{background-color:#a58b3f;transform:translateY(-1px)}
-    .btn-donate:active{background-color:#8f7836;transform:translateY(0)}
+    body { margin:0; font-family:'Open Sans',sans-serif; background:#f8f5f0; color:#2d2d2d; }
+    header {
+      background:#004b6b; padding:1rem 2rem;
+      display:flex; align-items:center; justify-content:space-between;
+      position:relative;
+    }
+    header img { height:60px; }
+    .header-actions { display:flex; align-items:center; gap:1rem; }
+    .btn-donate {
+      display:inline-block; background:#c4a64f; color:#fff!important;
+      padding:0.5rem 1.2rem; border-radius:4px;
+      text-decoration:none; font-weight:bold;
+      transition:background-color .25s ease, transform .1s ease;
+      font-size:0.95rem;
+    }
+    .btn-donate:hover { background:#a58b3f; transform:translateY(-1px); }
+    .btn-donate:active { background:#8f7836; transform:translateY(0); }
+    .menu-toggle {
+      font-size:1.8rem; color:#fff;
+      background:none; border:none; cursor:pointer;
+    }
+    .dropdown-menu {
+      display:none; position:absolute; top:100%; right:2rem;
+      background:#fff; padding:0.5rem 1rem; border-radius:5px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.2);
+      flex-direction:column; min-width:140px; z-index:1000;
+    }
+    .dropdown-menu.open { display:flex; }
+    .dropdown-menu a {
+      text-decoration:none; color:#2d2d2d;
+      padding:0.5rem 0; font-weight:bold; font-size:0.95rem;
+    }
 
     /* ───── Page Content ───── */
     .content {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
+      max-width:800px; margin:2rem auto; padding:0 1rem; line-height:1.6;
     }
     .content h1 {
-      font-family: 'Alef', sans-serif;
-      color: #004b6b;
-      font-size: 2.2rem;
-      text-align: center;
-      margin-bottom: 1rem;
+      font-family:'Alef',sans-serif; color:#004b6b;
+      font-size:2.2rem; text-align:center; margin-bottom:1rem;
     }
-    .content p {
-      margin-bottom: 1rem;
-    }
+    .content p { margin-bottom:1rem; }
 
     /* ───── Footer ───── */
     footer {
-      background: #004b6b;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
+      background:#004b6b; color:#fff; text-align:center;
+      padding:1rem; font-size:0.9rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="image.png" alt="Hoshen Logo">
-    <nav>
+    <img src="image.png" alt="Hoshen Logo"/>
+    <div class="header-actions">
+      <a href="https://www.paypal.com/paypalme/Hoshencri" target="_blank" rel="noopener" class="btn-donate">
+        Donate
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+    <nav class="dropdown-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="programs.html">Programs</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a
-      href="https://www.paypal.com/paypalme/Hoshencri"
-      target="_blank" rel="noopener"
-      class="btn-donate"
-    >
-      Donate
-    </a>
   </header>
 
   <div class="content">
@@ -75,15 +87,20 @@
       helping them protect their homes and children in times of crisis.
     </p>
     <p>
-      Additional community programs will be developed to strengthen resilience,
-      education, and Jewish identity for all residents.
+      Additional community programs will be developed to strengthen resilience, education,
+      and Jewish identity for all residents.
     </p>
-    <p><em>Placeholder for expanded list of future programs and partnerships.</em></p>
+    <p><em>Placeholder for future program details and partnerships.</em></p>
   </div>
 
   <footer>
     &copy; 2025 Hoshen – Connection, Roots, Eternity. All rights reserved.
   </footer>
 
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu   = document.querySelector('.dropdown-menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  </script>
 </body>
 </html>
