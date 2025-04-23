@@ -1,77 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programs - Hoshen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs | Hoshen</title>
   <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-  /* ─── Shared Header ─── */
-  header {
-    background-color: #004b6b;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  header img {
-    height: 60px;
-  }
-  nav {
-    display: flex;
-    gap: 1rem;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.95rem;
-  }
+    /* ───── Global & Header ───── */
+    body { margin: 0; font-family: 'Open Sans', sans-serif; background: #f8f5f0; color: #2d2d2d; }
+    header { background: #004b6b; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    header img { height: 60px; }
+    nav { display: flex; gap: 1rem; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.95rem; }
+    .btn-donate { /* same as above */ background-color:#c4a64f;color:#fff;padding:0.5rem 1.2rem;border-radius:4px;text-decoration:none;font-weight:bold;transition:background-color .25s ease,transform .1s ease; }
+    .btn-donate:hover{background-color:#a58b3f;transform:translateY(-1px)}
+    .btn-donate:active{background-color:#8f7836;transform:translateY(0)}
 
-  /* ─── Donate Button ─── */
-  .btn-donate {
-    background-color: #c4a64f;
-    color: white !important;
-    padding: 0.5rem 1.2rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.25s ease, transform 0.1s ease;
-  }
-  .btn-donate:hover { background-color: #a58b3f; transform: translateY(-1px); }
-  .btn-donate:active { background-color: #8f7836; transform: translateY(0); }
-</style>
+    /* ───── Page Content ───── */
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    .content h1 {
+      font-family: 'Alef', sans-serif;
+      color: #004b6b;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .content p {
+      margin-bottom: 1rem;
+    }
 
+    /* ───── Footer ───── */
+    footer {
+      background: #004b6b;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-  <img src="image.png" alt="Hoshen Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <a
-    href="https://www.paypal.com/paypalme/Hoshencri"
-    target="_blank" rel="noopener"
-    class="btn-donate"
-  >
-    Donate
-  </a>
-</header>
+    <img src="image.png" alt="Hoshen Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a
+      href="https://www.paypal.com/paypalme/Hoshencri"
+      target="_blank" rel="noopener"
+      class="btn-donate"
+    >
+      Donate
+    </a>
+  </header>
 
   <div class="content">
     <h1>Our Programs</h1>
-    <p>Our flagship initiative provides subsidized firearm training for women in Israel’s border communities, led by certified instructors.</p>
-    <p>Participants gain skills in self-defense, confidence, and situational awareness—helping them protect their homes and children in times of crisis.</p>
-    <p>Additional community programs will be developed to strengthen resilience, education, and Jewish identity for all residents.</p>
+    <p>
+      Our flagship initiative provides subsidized firearm training for women in Israel’s
+      border communities, led by certified instructors.
+    </p>
+    <p>
+      Participants gain skills in self-defense, confidence, and situational awareness—
+      helping them protect their homes and children in times of crisis.
+    </p>
+    <p>
+      Additional community programs will be developed to strengthen resilience,
+      education, and Jewish identity for all residents.
+    </p>
     <p><em>Placeholder for expanded list of future programs and partnerships.</em></p>
   </div>
 
   <footer>
-    <p>&copy; 2025 Hoshen - Connection, Roots, Eternity. All rights reserved.</p>
+    &copy; 2025 Hoshen – Connection, Roots, Eternity. All rights reserved.
   </footer>
+
 </body>
 </html>
