@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hoshen - Connection, Roots, Eternity</title>
+  <title>Hoshen – Connection, Roots, Eternity</title>
   <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    /* ─────── Global ─────── */
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
@@ -14,7 +15,6 @@
     }
     header {
       background-color: #004b6b;
-      color: white;
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
@@ -25,74 +25,100 @@
     }
     nav a {
       color: white;
-      margin: 0 1rem;
+      margin: 0 0.75rem;
       text-decoration: none;
       font-weight: bold;
+      font-size: 0.95rem;
     }
+
+    /* ─────── Donate Button ─────── */
+    .btn-donate {
+      display: inline-block;
+      background-color: #c4a64f;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.25s ease, transform 0.1s ease;
+    }
+    .btn-donate:hover {
+      background-color: #a58b3f;
+      transform: translateY(-1px);
+    }
+    .btn-donate:active {
+      background-color: #8f7836;
+      transform: translateY(0);
+    }
+
+    /* ─────── Hero ─────── */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('image5.jpeg') center/cover;
+      background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url('image5.jpeg') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 6rem 2rem;
     }
     .hero h1 {
+      font-family: 'Alef', sans-serif;
       font-size: 2.8rem;
       margin-bottom: 1rem;
-      font-family: 'Alef', sans-serif;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       max-width: 700px;
       margin: auto;
+      line-height: 1.4;
     }
-    .cta-button {
-      background-color: #c4a64f;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      font-size: 1.1rem;
-      cursor: pointer;
+    .hero .btn-donate {
       margin-top: 2rem;
     }
+
+    /* ─────── Footer ─────── */
     footer {
       background-color: #004b6b;
       color: white;
       text-align: center;
       padding: 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="image.png" alt="Hoshen Logo">
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="programs.html">Programs</a>
-      <a href="donate.html">Donate</a>
       <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
+      <!-- Donate link goes directly to PayPal Me -->
+      <a href="https://www.paypal.com/paypalme/Hoshencri"
+         target="_blank" rel="noopener"
+         class="btn-donate">
+        Donate
+      </a>
     </nav>
   </header>
 
-  <div class="hero">
+  <section class="hero">
     <h1>ח.ש.ן – חיבור, שורשים, נצח</h1>
-    <p>Strengthening Israel’s borders by empowering communities and reinforcing resilience through connection to land, heritage, and eternity.</p>
-    
-    <div class="paypal-button">
-      <!-- Replace YOUR_PAYPAL_ID with your actual PayPal ID -->
-      <form action="https://www.paypal.com/paypalme/Hoshencri" method="post" target="_blank">
-        <!input type="hidden" name="hosted_button_id" value="Hoshencri" />
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Donate with PayPal button">
-        <img alt="" src="https://www.paypal.com/paypalme/Hoshencri" width="1" height="1">
-      </form>
-    </div>
-  </div>
-  </div>
+    <p>
+      Strengthening Israel’s borders by empowering communities and reinforcing resilience
+      through connection to land, heritage, and eternity.
+    </p>
+    <a href="https://www.paypal.com/paypalme/Hoshencri"
+       target="_blank" rel="noopener"
+       class="btn-donate">
+      Donate via PayPal
+    </a>
+  </section>
 
-  
   <footer>
-    <p>&copy; 2025 Hoshen - Connection, Roots, Eternity. All rights reserved.</p>
+    &copy; 2025 Hoshen – Connection, Roots, Eternity. All rights reserved.
   </footer>
+
 </body>
 </html>
