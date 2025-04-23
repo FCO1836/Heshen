@@ -5,30 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Hoshen</title>
   <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Shared header styles -->
   <style>
-    /* ───── Global ───── */
     body { margin: 0; font-family: 'Open Sans', sans-serif; background: #f8f5f0; color: #2d2d2d; }
     header { background: #004b6b; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
     header img { height: 60px; }
-    nav a { color: white; margin: 0 0.75rem; text-decoration: none; font-weight: bold; font-size: 0.95rem; }
+    nav { display: flex; gap: 1rem; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.95rem; }
 
-    /* ───── Donate Button ───── */
-    .btn-donate { /* same as index */ }
-    .btn-donate:hover { /* same as index */ }
-    .btn-donate:active { /* same as index */ }
+    .btn-donate { background-color: #c4a64f; color: white !important; padding: 0.5rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold; transition: background-color 0.25s ease, transform 0.1s ease; }
+    .btn-donate:hover { background-color: #a58b3f; transform: translateY(-1px); }
+    .btn-donate:active { background-color: #8f7836; transform: translateY(0); }
 
-    /* ───── Main Content ───── */
     main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
-    main h1 { font-family: 'Alef', sans-serif; color: #004b6b; font-size: 2.2rem; margin-bottom: 1rem; text-align: center; }
+    main h1 { font-family: 'Alef', sans-serif; color: #004b6b; font-size: 2.2rem; text-align: center; margin-bottom: 1rem; }
     main ul { list-style: disc inside; margin: 1rem 0 2rem; }
     main ul li { margin: 0.6rem 0; }
 
-    /* ───── Footer ───── */
     footer { background: #004b6b; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem; }
   </style>
 </head>
 <body>
 
+  <!-- Shared header -->
   <header>
     <img src="image.png" alt="Hoshen Logo">
     <nav>
@@ -37,52 +36,37 @@
       <a href="programs.html">Programs</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
-      <a href="https://www.paypal.com/paypalme/Hoshencri"
-         target="_blank" rel="noopener"
-         class="btn-donate">
-        Donate
-      </a>
     </nav>
+    <a
+      href="https://www.paypal.com/paypalme/Hoshencri"
+      target="_blank" rel="noopener"
+      class="btn-donate"
+    >
+      Donate
+    </a>
   </header>
 
   <main>
     <h1>About Hoshen</h1>
     <p>
       “Hoshen – Connection, Roots, Eternity” empowers Israel’s seam-line communities by
-      strengthening their physical and mental resilience. Our very first project
-      provides subsidized firearm training—led by certified instructors—specifically
-      for the courageous women of these border areas.
+      strengthening their physical and mental resilience. Our flagship project provides
+      subsidized firearm training—led by certified instructors—for the courageous
+      women of these border areas.
     </p>
-
     <ul>
       <li><strong>Stronger Connections:</strong> Fostering unity and security within the communities.</li>
-      <li><strong>Deepening Roots:</strong> Equipping residents to defend their homes and reinforce their bond to the land.</li>
-      <li><strong>Ensuring Eternity (of Safety):</strong> Granting lifelong skills that safeguard families and the community.</li>
+      <li><strong>Deepening Roots:</strong> Equipping residents to protect their homes and reinforce their bond to the land.</li>
+      <li><strong>Ensuring Eternity:</strong> Providing lifelong skills that safeguard families and the community.</li>
     </ul>
-
     <p>
-      Join us in this mission of national importance. Your support—financial or by
-      spreading the word—helps us launch and scale this vital training program.
+      Join us in this vital mission. Your support—financial or by spreading the word—
+      helps us launch and expand this important training program.
     </p>
-
-    <p><strong>Contact the Founders:</strong></p>
-    <ul>
-      <li>Ydidiya Fish – +972 54 943 4153</li>
-      <li>Elchanan Maimon – +972 55 666 3780</li>
-    </ul>
-
-    <div style="text-align:center; margin-top:2rem;">
-      <a href="https://www.paypal.com/paypalme/Hoshencri"
-         target="_blank" rel="noopener"
-         class="btn-donate">
-        Donate Now
-      </a>
-    </div>
   </main>
 
   <footer>
     &copy; 2025 Hoshen – Connection, Roots, Eternity. All rights reserved.
   </footer>
-
 </body>
 </html>
