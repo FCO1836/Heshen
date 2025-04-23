@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Hoshen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet"/>
   <style>
-    /* ───── Global & Header ───── */
+    /* ───── Global ───── */
     body { margin: 0; font-family: 'Open Sans', sans-serif; background: #f8f5f0; color: #2d2d2d; }
-    header { background: #004b6b; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+
+    /* ───── Header ───── */
+    header {
+      background: #004b6b;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
     header img { height: 60px; }
-    nav { display: flex; gap: 1rem; }
-    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.95rem; }
+    .header-actions { display: flex; align-items: center; gap: 1rem; }
     .btn-donate {
+      display: inline-block;
       background-color: #c4a64f;
-      color: #fff;
+      color: #fff !important;
       padding: 0.5rem 1.2rem;
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.25s ease, transform 0.1s ease;
+      font-size: 0.95rem;
     }
     .btn-donate:hover { background-color: #a58b3f; transform: translateY(-1px); }
     .btn-donate:active { background-color: #8f7836; transform: translateY(0); }
+    .menu-toggle {
+      display: flex; flex-direction: column; justify-content: space-between;
+      width: 28px; height: 20px; background: none; border: none;
+      cursor: pointer; padding: 0;
+    }
+    .menu-toggle span {
+      display: block; height: 3px; background: #fff; border-radius: 2px;
+    }
+    .dropdown-menu {
+      display: none; position: absolute; top: 100%; right: 2rem;
+      background: #fff; padding: 0.5rem 1rem; border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2); flex-direction: column;
+      min-width: 140px; z-index: 1000;
+    }
+    .dropdown-menu.open { display: flex; }
+    .dropdown-menu a {
+      text-decoration: none; color: #2d2d2d; padding: 0.5rem 0;
+      font-weight: bold; font-size: 0.95rem;
+    }
 
     /* ───── Page Content ───── */
     main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
+      max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6;
     }
     main h1 {
-      font-family: 'Alef', sans-serif;
-      color: #004b6b;
-      font-size: 2.2rem;
-      text-align: center;
-      margin-bottom: 1rem;
+      font-family: 'Alef', sans-serif; color: #004b6b;
+      font-size: 2.2rem; text-align: center; margin-bottom: 1rem;
     }
     main ul {
-      list-style: disc inside;
-      margin: 1rem 0 2rem;
+      list-style: disc inside; margin: 1rem 0 2rem;
     }
-    main ul li {
-      margin: 0.6rem 0;
-    }
+    main ul li { margin: 0.6rem 0; }
 
     /* ───── Footer ───── */
     footer {
-      background: #004b6b;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
+      background: #004b6b; color: #fff; text-align: center;
+      padding: 1rem; font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="image.png" alt="Hoshen Logo">
-    <nav>
+    <img src="image.png" alt="Hoshen Logo"/>
+    <div class="header-actions">
+      <a href="https://www.paypal.com/paypalme/Hoshencri"
+         target="_blank" rel="noopener"
+         class="btn-donate">Donate</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="dropdown-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="programs.html">Programs</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a
-      href="https://www.paypal.com/paypalme/Hoshencri"
-      target="_blank" rel="noopener"
-      class="btn-donate"
-    >
-      Donate
-    </a>
   </header>
 
   <main>
@@ -99,5 +117,10 @@
     &copy; 2025 Hoshen – Connection, Roots, Eternity. All rights reserved.
   </footer>
 
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu   = document.querySelector('.dropdown-menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  </script>
 </body>
 </html>
