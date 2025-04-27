@@ -38,6 +38,7 @@
     }
     .btn-donate:hover { background-color: #a58b3f; transform: translateY(-1px); }
     .btn-donate:active { background-color: #8f7836; transform: translateY(0); }
+
     .menu-toggle {
       font-size: 1.8rem;
       color: #fff;
@@ -67,15 +68,19 @@
       font-size: 0.95rem;
     }
 
-    /* ───── Main with Logo Background ───── */
+    /* ───── Main with Faded, Large Logo Background ───── */
     main {
       max-width: 800px;
       margin: 2rem auto;
       padding: 4rem 1rem;
-      background:
-        rgba(255,255,255,0.85)
-        url('hoshen_logo_transparent.png') center center no-repeat;
-      background-size: 20%;
+      /* top layer: white overlay making text pop,
+         bottom layer: your logo, centered, at 60% size */
+      background-image:
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+        url('hoshen_logo_transparent2.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 60%;
       border-radius: 8px;
       line-height: 1.6;
     }
@@ -107,7 +112,7 @@
 <body>
 
   <header>
-    <img src="image.png" alt="Hoshen Logo"/>
+    <img src="hoshen_logo_transparent.png" alt="Hoshen Logo"/>
     <div class="header-actions">
       <a href="https://www.paypal.com/paypalme/Hoshencri"
          target="_blank" rel="noopener"
