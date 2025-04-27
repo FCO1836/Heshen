@@ -62,17 +62,24 @@
     main ul li { margin:0.6rem 0; }
 
 
-     /* ───── Hero ───── */
-    .hero {
-      background:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url('image.png') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-    .hero h1 { font-family: 'Alef', sans-serif; font-size: 2.8rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.15rem; max-width: 700px; margin: auto; line-height: 1.4; }
+   /* ───── About‐page Hero with Logo ───── */
+.about-hero {
+  /* logo centered, no-repeat, sized at 40% of container */
+  background: 
+    url('hoshen_logo_transparent.png') center center no-repeat,
+    #f8f5f0;                /* fallback background color */
+  background-size: 40%;
+  padding: 8rem 1rem 4rem;  /* plenty of space above/below */
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-family: 'Alef', sans-serif;
+  font-size: 2.8rem;
+  color: #004b6b;
+  margin: 0;
+}
+
 
     /* ───── Footer ───── */
     footer {
@@ -99,6 +106,10 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+  <section class="about-hero">
+  <h1>About Hoshen</h1>
+</section>
+
 
   <main>
     <h1>About Hoshen</h1>
