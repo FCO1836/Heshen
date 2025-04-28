@@ -6,83 +6,114 @@
   <title>Projects | Hoshen</title>
   <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet"/>
   <style>
+    /* ───── Global ───── */
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #f8f5f0;
+      color: #2d2d2d;
+    }
 
-    /* ───── Global & Header ───── */
-    body { margin:0; font-family:'Open Sans',sans-serif; background:#f8f5f0; color:#2d2d2d; }
+    /* ───── Header ───── */
     header {
-      background:#004b6b; padding:1rem 2rem;
-      display:flex; align-items:center; justify-content:space-between;
-      position:relative;
+      background: #004b6b;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
     }
-    header img { height:60px; }
-    .header-actions { display:flex; align-items:center; gap:1rem; }
+    header img { height: 60px; }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
     .btn-donate {
-      display:inline-block; background:#c4a64f; color:#fff!important;
-      padding:0.5rem 1.2rem; border-radius:4px;
-      text-decoration:none; font-weight:bold;
-      transition:background-color .25s ease, transform .1s ease;
-      font-size:0.95rem;
+      display: inline-block;
+      background-color: #c4a64f;
+      color: #fff !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.25s ease, transform 0.1s ease;
+      font-size: 0.95rem;
     }
-    .btn-donate:hover { background:#a58b3f; transform:translateY(-1px); }
-    .btn-donate:active { background:#8f7836; transform:translateY(0); }
+    .btn-donate:hover { background-color: #a58b3f; transform: translateY(-1px); }
+    .btn-donate:active { background-color: #8f7836; transform: translateY(0); }
     .menu-toggle {
-      font-size:1.8rem; color:#fff;
-      background:none; border:none; cursor:pointer;
+      font-size: 1.8rem;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
     .dropdown-menu {
-      display:none; position:absolute; top:100%; right:2rem;
-      background:#fff; padding:0.5rem 1rem; border-radius:5px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.2);
-      flex-direction:column; min-width:140px; z-index:1000;
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 2rem;
+      background: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      flex-direction: column;
+      min-width: 140px;
+      z-index: 1000;
     }
-    .dropdown-menu.open { display:flex; }
+    .dropdown-menu.open { display: flex; }
     .dropdown-menu a {
-      text-decoration:none; color:#2d2d2d;
-      padding:0.5rem 0; font-weight:bold; font-size:0.95rem;
+      text-decoration: none;
+      color: #2d2d2d;
+      padding: 0.5rem 0;
+      font-weight: bold;
+      font-size: 0.95rem;
     }
+
     /* ───── Main with Faded, Large Logo Background ───── */
-main {
-  /* two-layer background: 
-     1) a semi-opaque white overlay for readability
-     2) your transparent-outside logo centered behind the text */
-  background-image:
-    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
-    url('hoshen_logo_transparent.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;    /* controls how big the logo is behind the text */
-
-  /* keeping your existing spacing & rounding */
-  padding: 4rem 1rem;
-  border-radius: 8px;
-}
-
-
-    /* ───── Page Content ───── */
-    .content {
-      max-width:800px; margin:2rem auto; padding:0 1rem; line-height:1.6;
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 4rem 1rem;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+        url('hoshen_logo_transparent2.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 60%;
+      border-radius: 8px;
+      line-height: 1.6;
     }
-    .content h1 {
-      font-family:'Alef',sans-serif; color:#004b6b;
-      font-size:2.2rem; text-align:center; margin-bottom:1rem;
+    main h1 {
+      font-family: 'Alef', sans-serif;
+      color: #004b6b;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
-    .content p { margin-bottom:1rem; }
+    main p {
+      margin-bottom: 1rem;
+    }
 
     /* ───── Footer ───── */
     footer {
-      background:#004b6b; color:#fff; text-align:center;
-      padding:1rem; font-size:0.9rem;
+      background: #004b6b;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="hoshen_logo_transparent.png" alt="Hoshen Logo"/>
+    <img src="image.png" alt="Hoshen Logo"/>
     <div class="header-actions">
-      <a href="https://www.paypal.com/paypalme/Hoshencri" target="_blank" rel="noopener" class="btn-donate">
-        Donate
-      </a>
+      <a href="https://www.paypal.com/paypalme/Hoshencri"
+         target="_blank" rel="noopener"
+         class="btn-donate">Donate</a>
       <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     </div>
     <nav class="dropdown-menu">
@@ -94,21 +125,32 @@ main {
     </nav>
   </header>
 
-      
-  <div class="content">
-  <h3>Our Key Initiatives</h3>
-  <p>Our flagship program offers subsidized safety and preparedness training for women in Israel’s border and rural communities, led by certified experts.  
-    Participants build self-defense skills, boost confidence, and sharpen situational awareness—equipping them to care for their homes and loved ones under any circumstance.</p>
-  
-   <p>We’re also restoring and creating a network of biblical lookouts at historic vantage points.  
-    These scenic platforms reconnect visitors with our ancestral heritage, offer panoramic views of the land, and foster a deeper appreciation for the places where our traditions first took root.<p>
- 
-    <p>Each summer we run immersive camps for kids that blend outdoor adventure, hands-on explorations of biblical stories, and traditional arts.  
-    Through hikes, storytelling around ancient sites, and creative workshops, children form lasting bonds with the land, one another, and their Jewish identity.<p>
- 
-    <p>Alongside these flagship projects, we continue developing community programs to strengthen resilience, education, and cultural identity for all residents—building a vibrant, connected network across the region.</p>
-</div>
-
+  <main>
+    <h1>Our Key Initiatives</h1>
+    <p>
+      Our flagship program offers subsidized safety and preparedness training for women in
+      Israel’s border and rural communities, led by certified experts. Participants build
+      self-defense skills, boost confidence, and sharpen situational awareness—equipping
+      them to care for their homes and loved ones under any circumstance.
+    </p>
+    <p>
+      We’re also restoring and creating a network of biblical lookouts at historic vantage
+      points. These scenic platforms reconnect visitors with our ancestral heritage,
+      offer panoramic views of the land, and foster a deeper appreciation for the places
+      where our traditions first took root.
+    </p>
+    <p>
+      Each summer we run immersive camps for kids that blend outdoor adventure,
+      hands-on explorations of biblical stories, and traditional arts. Through hikes,
+      storytelling around ancient sites, and creative workshops, children form lasting
+      bonds with the land, one another, and their Jewish identity.
+    </p>
+    <p>
+      Alongside these flagship projects, we continue developing community programs to
+      strengthen resilience, education, and cultural identity for all residents—
+      building a vibrant, connected network across the region.
+    </p>
+  </main>
 
   <footer>
     &copy; 2025 Hoshen – Connection, Roots, Eternity. All rights reserved.
