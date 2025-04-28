@@ -6,6 +6,23 @@
   <title>Contact | Hoshen</title>
   <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet"/>
   <style>
+  /* ───── Main with Faded, Large Logo Background ───── */
+main {
+  /* two-layer background: 
+     1) a semi-opaque white overlay for readability
+     2) your transparent-outside logo centered behind the text */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    url('hoshen_logo_transparent2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60%;    /* controls how big the logo is behind the text */
+
+  /* keeping your existing spacing & rounding */
+  padding: 4rem 1rem;
+  border-radius: 8px;
+}
+  
     /* ───── Global & Header ───── */
     body { margin:0; font-family:'Open Sans',sans-serif; background:#f8f5f0; color:#2d2d2d; }
     header {
