@@ -1,90 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hoshen – Connection, Roots, Eternity</title>
-  <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hoshen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alef&family=Open+Sans&display=swap" rel="stylesheet"/>
   <style>
     /* ───── Global ───── */
-    body { margin: 0; font-family: 'Open Sans', sans-serif; background: #f8f5f0; color: #2d2d2d; }
-    header { background: #004b6b; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    header img { height: 60px; }
-    nav a { color: white; margin: 0 0.75rem; text-decoration: none; font-weight: bold; font-size: 0.95rem; }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #f8f5f0;
+      color: #2d2d2d;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    /* ───── Logo & Title ───── */
+    #logo {
+      height: 100px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Alef', sans-serif;
+      color: #004b6b;
+      font-size: 2.8rem;
+      margin: 0 0 2rem;
+    }
+
+    /* ───── Description ───── */
+    .description {
+      text-align: left;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .description p {
+      margin-bottom: 1rem;
+    }
+    .description ul {
+      list-style: disc inside;
+      margin: 1rem 0;
+      padding: 0;
+    }
+    .description ul li {
+      margin: 0.5rem 0;
+    }
+
+    /* ───── Image Section ───── */
+    .image-section {
+      margin: 2rem 0;
+    }
+    .image-section img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .image-section .caption {
+      font-family: 'Alef', sans-serif;
+      color: #004b6b;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    /* ───── Contact Info ───── */
+    .contact {
+      text-align: left;
+      margin: 2rem 0;
+      line-height: 1.6;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+    }
 
     /* ───── Donate Button ───── */
+    #donate-section {
+      margin: 3rem 0 1.5rem;
+    }
+    #donate-section p {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
     .btn-donate {
       display: inline-block;
       background-color: #c4a64f;
       color: #fff;
-      padding: 0.5rem 1.2rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
       transition: background-color 0.25s ease, transform 0.1s ease;
     }
-    .btn-donate:hover { background-color: #a58b3f; transform: translateY(-1px); }
-    .btn-donate:active { background-color: #8f7836; transform: translateY(0); } 
-
-    /* ───── Hero ───── */
-    .hero {
-      background:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url('image5.jpeg') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 6rem 2rem;
+    .btn-donate:hover {
+      background-color: #a58b3f;
+      transform: translateY(-1px);
     }
-    .hero h1 { font-family: 'Alef', Arial; font-size: 2rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.15rem; max-width: 700px; margin: auto; line-height: 1.4; }
-    /* add space above the hero Donate button */
-    .hero .btn-donate {
-     margin-top: 2rem;  /* or adjust to taste: 1rem, 3rem, etc. */
-     }
+    .btn-donate:active {
+      background-color: #8f7836;
+      transform: translateY(0);
+    }
 
-
-    /* ───── Footer ───── */
-    footer { background: #004b6b; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem; }
+    /* ───── Footer (Email) ───── */
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #555;
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Logo & Title -->
+    <img id="logo" src="image.png" alt="Hoshen Logo"/>
+    <h1>Hoshen</h1>
 
-  <header>
-    <img src="hoshen_logo_transparent.png" alt="Hoshen Logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="programs.html">Projects</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.paypal.com/paypalme/Hoshencri"
-         target="_blank" rel="noopener"
-         class="btn-donate">
-        Donate
+    <!-- Description -->
+    <div class="description">
+      <p>“Hoshen – Connection, Roots, Eternity” empowers Israel’s seam-line communities by strengthening their physical and mental resilience. Our flagship project provides subsidized self defense training—led by certified instructors—for the courageous men and women of these border areas.</p>
+      <ul>
+        <li><strong>Stronger Connections:</strong> Fostering unity and security within the communities.</li>
+        <li><strong>Deepening Roots:</strong> Equipping residents to protect their homes and reinforce their bond to the land.</li>
+        <li><strong>Practical Tools:</strong> Providing lifelong skills that safeguard families and the community.</li>
+      </ul>
+      <p>Join us in this vital mission. Your support—financial or by spreading the word—helps us launch and expand this important training program.</p>
+    </div>
+
+    <!-- Image + Caption -->
+    <div class="image-section">
+      <img src="image1.jpeg" alt="Hoshen Shield"/>
+      <div class="caption">ח.ש.ן – חיבור, שורשים, נצח</div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact">
+      <p><strong>Ydidiya Fish:</strong> +972 54 943 4153</p>
+      <p><strong>Elchanan Maimon:</strong> +972 55 666 3780</p>
+    </div>
+
+    <!-- Donate Button -->
+    <div id="donate-section">
+      <p>Whoever would like to donate, click here:</p>
+      <a href="https://www.paypal.com/paypalme/Hoshencri" class="btn-donate" target="_blank" rel="noopener">
+        Donate via PayPal
       </a>
-    </nav>
-  </header>
+    </div>
 
-  <section class="hero">
-    <h1>ח.ש.ן – חיבור, שורשים, נצח</h1>
-    <p>
-      Strengthening Israel’s borders by empowering communities and reinforcing resilience
-      through connection to land, heritage, and eternity.
-     
-      <ln>    </ln>
-       
-    </p>
-
-    <a href="https://www.paypal.com/paypalme/Hoshencri"
-       target="_blank" rel="noopener"
-       class="btn-donate">
-      Donate via PayPal
-    </a>
-  </section>
-
-  <footer>
-    &copy; 2025 Hoshen – Connection, Roots, Eternity. All rights reserved.
-  </footer>
-
+    <!-- Email Footer -->
+    <footer>
+      <p><strong>Email:</strong> hoshen.cre@gmail.com</p>
+    </footer>
+  </div>
 </body>
 </html>
